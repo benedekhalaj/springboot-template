@@ -8,5 +8,4 @@ import java.util.List;
 @Mapper
 public interface AppUserMapper {
     List<com.benedekhalaj.springboottemplate.api.model.AppUser> entityToDto(List<AppUser> appUser);
-    com.benedekhalaj.springboottemplate.api.model.AppUser entityToDto(AppUser appUser);
 }
