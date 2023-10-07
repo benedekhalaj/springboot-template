@@ -13,10 +13,10 @@ Dependencies:
 
 Classes:
 - AppUser model and entity
-- AppUser related enums, resources, services and repositories
+- AppUser related enum, resource, mapper, service and repository
+- GlobalExceptionHandler, NotFoundException
 
 I may add in the future:
-- TemplateException
 - Spring Security
 - Integration Test Environment
 - Docker, PostgreSQL Driver
