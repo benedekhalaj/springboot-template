@@ -31,4 +31,17 @@ public class AppUserResourceImpl implements AppUserResource {
             throw re;
         }
     }
+
+    @Override
+    public AppUser create(AppUser appUser) {
+        log.trace("Create app user... (data: {})", appUser);
+        try {
+            AppUser res = appUserMapper.entityToDto(appUserService.create(appUserMapper.dtoToEntity(appUser)));
+            log.info("App user has been successfully created! (data:{})", res);
+            return res;
+        } catch (RuntimeException re) {
+            log.error("Error occurred while creating app user! (data: " + appUser + ")", re);
+            throw re;
+        }
+    }
 }

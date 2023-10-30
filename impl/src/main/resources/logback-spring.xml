@@ -1,0 +1,17 @@
+<configuration>
+
+    <!-- Console appender with colored output -->
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5(%logger{36}) - %msg%n</pattern>
+            <outputPatternAsPresentationHeader>true</outputPatternAsPresentationHeader>
+        </encoder>
+    </appender>
+
+    <logger name="com.benedekhalaj.springbootsandbox" level="TRACE" />
+
+    <!-- Root logger level -->
+    <root level="INFO">
+        <appender-ref ref="CONSOLE" />
+    </root>
+</configuration>

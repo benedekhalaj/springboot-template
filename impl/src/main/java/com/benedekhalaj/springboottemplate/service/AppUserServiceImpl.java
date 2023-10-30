@@ -1,6 +1,5 @@
 package com.benedekhalaj.springboottemplate.service;
 
-import com.benedekhalaj.springboottemplate.api.exception.NotFoundException;
 import com.benedekhalaj.springboottemplate.database.entity.AppUser;
 import com.benedekhalaj.springboottemplate.database.repository.AppUserRepository;
 import lombok.RequiredArgsConstructor;
@@ -18,5 +17,10 @@ public class AppUserServiceImpl implements AppUserService {
     @Override
     public List<AppUser> getAll() {
         return appUserRepository.findAll();
+    }
+
+    @Override
+    public AppUser create(AppUser appUser) {
+        return appUserRepository.save(appUser);
     }
 }

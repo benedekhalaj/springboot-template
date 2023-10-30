@@ -6,4 +6,6 @@ import java.util.List;
 
 public interface AppUserService {
     List<AppUser> getAll();
+
+    AppUser create(AppUser appUser);
 }
